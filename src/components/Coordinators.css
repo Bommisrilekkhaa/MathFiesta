@@ -1,0 +1,114 @@
+.coordinators{
+    margin: 0%;
+}
+.faculty{
+  background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:2em 1em;
+    text-align: center;
+}
+.faculty section{
+    padding: 2em 4em;
+    border: 0.5em groove rgba(0, 115, 255, 0.685);
+    width: 20em;
+    margin: 1em;
+    line-height: 1.5em;
+}
+.faculty h1{
+    margin:0;
+    padding: 1em;
+}
+.student{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    justify-content: center;
+    gap: 2em;
+    padding: 2em;
+    background:var(--gradient2);
+    padding-top: 5em;
+    border-radius: 5em;
+    align-items: center;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0;
+}
+.student-member{
+  display: flex;
+  height: 15em;
+  align-items: center;
+  box-sizing: margin-box;
+  justify-content: center;
+  width: 25em;
+  padding: 1em;
+  padding-left: 0%;
+}
+.student-details{
+  position: relative;
+  left: -10em;
+  margin: 5em 0em;
+  align-items: center;
+  width: 0px;
+  padding: 1.2em 2em;
+  background-color: blue;
+  height: 6em;
+  overflow: hidden;
+  color: black;
+  text-align: end;
+  transition: all 1s;
+  border-top-right-radius: 5em;
+  border-bottom-right-radius: 5em;
+  font-size: medium;
+}
+.faculty h1 ,.student-header{
+  text-align: center;
+  margin: 1em 0em;
+  font-size: 1.5em;
+}
+.student-member img{
+  width: 12em;
+  transition: all 1s;
+
+  border-radius: 2em;
+  border: 0.1em solid white;
+  position: relative;
+  height: 12em;
+  z-index: 1;
+}
+.student-member:hover img{
+  height: 8em;
+  width: 8em;
+  border-radius: 50%;
+  left: 2em;
+  border: 0.2em solid rgb(0, 166, 166);
+}
+.student-member:hover .student-details{
+  width: 60%;
+  left: 0;
+  font-size: small;
+  z-index: 0;
+  display: block;
+  background:linear-gradient(270deg,rgba(0, 255, 255, 0.5),rgba(12, 12, 236, 0.541),rgba(0, 119, 255, 0.482));
+}
+@media screen and  (min-width:970px) {
+  .student{
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .student-member{
+    overflow: visible;
+  }
+  .student-member img{
+    position: relative;
+  }
+  .student-member:hover img{
+    height: 10em;
+    width: 10em;
+  }
+  .student-details{
+    background-color: rgba(177, 18, 18, 0.712);
+    display: none;
+  }
+}
